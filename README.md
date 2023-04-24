@@ -5,10 +5,11 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 ## Calendário de entregas
 
 > ``24/04`` Kick-off projeto final;
-> - [*] Criar um repositório **privado** da equipe;
-> - [*] Adicionar a mim ```@sauloafoliveira``` como membro do projeto;
-> - [-] Buscar formar equipes entre 04-05 colegas;
-> - [*] Commitar um readme.me com a escolha dos membros do projeto.
+> - [x] Criar um repositório **privado** da equipe;
+> - [x] Adicionar a mim ```@sauloafoliveira``` como membro do projeto;
+> - [x] Buscar formar equipes entre 04-05 colegas;
+> - [x] Commitar um readme.me com a escolha dos membros do projeto.
+
 >   -"Murilo Francio"-
 
 > ``03/05`` Seleção dos projetos;

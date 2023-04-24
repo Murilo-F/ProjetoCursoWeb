@@ -10,6 +10,7 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 > - [x] Buscar formar equipes entre 04-05 colegas;
 > - [x] Commitar um readme.me com a escolha dos membros do projeto.
 
+>  **Grupo**
 >   -"Murilo Francio"-
 
 > ``03/05`` Seleção dos projetos;

@@ -6,9 +6,9 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 
 > ``24/04`` Kick-off projeto final;
 > - [*] Criar um repositório **privado** da equipe;
-> - [ ] Adicionar a mim ```@sauloafoliveira``` como membro do projeto;
-> - [ ] Buscar formar equipes entre 04-05 colegas;
-> - [ ] Commitar um readme.me com a escolha dos membros do projeto.
+> - [*] Adicionar a mim ```@sauloafoliveira``` como membro do projeto;
+> - [-] Buscar formar equipes entre 04-05 colegas;
+> - [*] Commitar um readme.me com a escolha dos membros do projeto.
 
 > ``03/05`` Seleção dos projetos;
 > - [ ] Escolha do tema do projeto.

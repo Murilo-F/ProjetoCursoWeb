@@ -17,10 +17,13 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 >   -"Eloize Kondras"-
 >   
 >   -"Nara Leal"-
+>
+>   -"Juliano"-
 -------------------------------------------------
 > ``03/05`` Seleção dos projetos;
 > - [x] Escolha do tema do projeto.
-> **Marcação de consultas**
+>
+> **Controle de Suporte**
 -------------------------------------------------
 > ``18/05`` Definições da camada de Modelos;
 > - [ ] Diagrama de Classes;

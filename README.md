@@ -12,6 +12,8 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 >
 >  **Grupo**
 >   -"Murilo Francio"-
+>   -"Nara Leal"-
+>   -"Eloize Kondras"-
 -------------------------------------------------
 > ``03/05`` Seleção dos projetos;
 > - [x] Escolha do tema do projeto.

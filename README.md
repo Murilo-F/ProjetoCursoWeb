@@ -23,7 +23,7 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 > ``03/05`` Seleção dos projetos;
 > - [x] Escolha do tema do projeto.
 >
-> **Controle de Suporte**
+> **Controle de Estoque**
 -------------------------------------------------
 > ``18/05`` Definições da camada de Modelos;
 > - [ ] Diagrama de Classes;
@@ -47,8 +47,8 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 
 > ``06/07`` Apresentação final.
 
-
-# Projetos
+-----------------------------------------------------
+# Projeto Escolhido
 
 ## Almoxarifado de hospital
 
@@ -75,52 +75,3 @@ No estoque, deverão ser mostradas as seguintes  informações: o nome do materi
 Em relação às novas compras de materiais, deverão ser guardadas as seguintes informações: um código de identificação dessa demanda, o funcionário que a realizou, o(s) produto(s) solicitados(s), data da demanda, o valor total da compra, sua forma de pagamento e sua situação (ativa ou cancelada).
 
 Os funcionário poderam realizar baixas no Almoxarido, isto é, demandar materiais para serem utilizados pelo hospital. Uma vez que essa demanda for atendida, atualiza-se a quantidade de elementos no almoxarifado.
-
-## Marcação de consultas
-
-Trata-se de um sistema web para auxiliar médicos e recepcionistas de uma clínica médica no processo de atendimento e gerenciamento de filas de espera. As agendas dos médicos seriam configuradas de acordo com os dias e horários de atendimentos de cada um, bem como a quantidade máxima de consultas permitidas. Já na recepção o sistema auxiliaria os atendentes a identificar a consulta de um paciente marcada previamente e na inserção de novos pacientes na fila de atendimento sem marcação prévia de uma consulta.
-
-
-O sistema deve ser capaz de exibir para os médicos a sua lista de atendimento do dia, mostrando, de forma clara, quantos pacientes constam em sua lista e se sua chegada a clinica já foi confirmada, ou não. Os médicos poderiam visualizar, de qualquer lugar, como esta sua agenda de atendimentos para o dia. Para iniciar um atendimento, podem chamar o próximo paciente através do clique em um botão do sistema. Para registrar o atendimento os médicos informaram qual o diagnostico da consulta e o receituário informado. Apos a confirmação do registro da consulta, estas informações serão enviadas para o email do paciente.
-
-### Requisitos 
-
-- [ ] Cadastro de médico;
-- [ ] Cadastro de pacientes;
-- [ ] Configurar agenda de atendimento de médico;
-- [ ] Marcar consulta;
-- [ ] Confirmar presença;
-- [ ] Confirmar autorização do plano de saúde;
-- [ ] Registrar consulta;
-- [ ] Visualizar protuário;
-- [ ] Gerenciar fila de atendimento.
-
-## Controle e reserva de leitos
-
-A gestão de leitos é um assunto muito importante para um hospital ou clínica,  pois através da visualização e monitoramento constante do uso das camas, ou seja, os leitos ocupados, disponíveis, reservados, em limpeza, dentre outros, pode-se combater a ociosidade dos leitos ao aprimorar o planejamento para o seu uso.
-
-
-### Requisitos
-
-- [ ] Cadastro de pacientes;
-- [ ] Cadastro de leitos;
-- [ ] Visão geral dos leitos;
-- [ ] Dar alta a um paciente;
-
-Ao se cadastrar um paciente e informar dados pesssoais (``número do prontuário``, ``nome do paciente,`` ``idade``, ``especiliadade``, ``data de internação``), os dados acerca da sua permanência, classificação Fugulin e Origem precisam ser informados. Estes dados estão listados conforme categorias abaixo:
-
-| Motivo da permanência          | Classificaçnao de Fugulin    | Origem             |
-| :----------------------------- | :--------------------------- | :----------------- |
-| Leito de enfermaria            | Cuidados mínimos             | SAMU               |
-| Leito de terapia intensiva     | Cuidados intermediários      | Demanda Espontânea |
-| Parecer de outra especialidade | Cuidados de alta dependência |                    |
-| Transferência externa          | Cuidados semi-intensivos     |                    |
-| Social                         | Cuidados intensivos          |                    |
-| Hemodiálise                    |                              |                    |
-| Outros (descrever)             |                              |                    |
-
-Na visualização dos leitos, cores de acordo com o tempo de perman6encia do paciente devem seguir as seguintes características:
-
-| Verde                                   | Amarela                              | Vermelha   |
-| --------------------------------------- | ------------------------------------ | ---------- |
-| Se tempo de permanência for ≤ 24 horas. | Permanência > 24 horas e ≤ 72 horas. | ≥ 72 horas |

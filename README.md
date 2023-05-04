@@ -11,7 +11,12 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 > - [x] Commitar um readme.me com a escolha dos membros do projeto.
 >
 >  **Grupo**
+>  
 >   -"Murilo Francio"-
+>   
+>   -"Eloize Kondras"-
+>   
+>   -"Nara Leal"-
 -------------------------------------------------
 > ``03/05`` Seleção dos projetos;
 > - [x] Escolha do tema do projeto.

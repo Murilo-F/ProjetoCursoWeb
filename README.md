@@ -26,9 +26,9 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 > **Controle de Estoque**
 -------------------------------------------------
 > ``18/05`` Definições da camada de Modelos;
-> - [ ] Diagrama de Classes;
-> - [ ] Diagrama de Entidade-Relacional;
-> - [ ] Script SQL de criação do banco de dados do projeto.
+> - [x] Diagrama de Classes;
+> - [x] Diagrama de Entidade-Relacional;
+> - [x] Script SQL de criação do banco de dados do projeto.
 
 > ``05/06`` Definições da camada de Visão;
 > - [ ]  Protótipo de telas com base nos requisitos;

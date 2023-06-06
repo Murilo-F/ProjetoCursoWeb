@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.teste {
+  background-color: aqua;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh; /* Alterado de "height" para "min-height" */
+}
+
+.btn {
+  position: fixed;
+  top: 15px;
+  right: 340px;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.header {
+  background-color: #ffffff;
+  position: relative;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nome {
+  height: 60px;
+  position: fixed;
+  top: 10px;
+  left: 29%;
+}
+
+.logo img {
+  height: 60px;
+  position: fixed;
+  top: 10px;
+  left: 25%;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger {
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+}
+
+.search-bar {
+  margin-left: 10px;
+}
+
+.search-bar input[type="text"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+}
+
+.carousel-inner {
+  height: 400px; /* Defina a altura desejada */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px; /* Defina a distância desejada a partir da parte inferior */
+  left: 50%;
+  transform: translateX(-50%);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}

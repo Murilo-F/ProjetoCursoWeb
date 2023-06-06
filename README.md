@@ -14,11 +14,13 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 >  
 >   -"Murilo Francio"-
 >   
->   -"Eloize Kondras"-
+>   -"Jéssica Lewandovski"-
 >   
->   -"Nara Leal"-
+>   -"Thayna Dmenjon"-
 >
 >   -"Juliano"-
+>
+>   -"Matheus Vieira"-
 -------------------------------------------------
 > ``03/05`` Seleção dos projetos;
 > - [x] Escolha do tema do projeto.
@@ -30,16 +32,18 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 > - [x] Diagrama de Entidade-Relacional;
 > - [x] Script SQL de criação do banco de dados do projeto.
 
-> ``05/06`` Definições da camada de Visão;
-> - [ ]  Protótipo de telas com base nos requisitos;
-> - [ ]  Definição da identidade visual.
+> ``05/06`` Definições da camada de Visão e Controle;
+> - [-]  Protótipo de telas com base nos requisitos;
+> - [-]  Definição da identidade visual;
+> - [-]  Implementação das entidades e relacionamentos utilizando Spring;
+> - [-]  Implementação de enpoints para relização de CRUDs.
 
 > ``14/06`` Definições da camada de Controle;
-> - [ ]  Integração com Banco de dados;
-> - [ ] (CRUD básico das entidades;
+> - [ ] Implementação de Autenticação de usuários e definição de autorização nos enpoints.
 
 > ``29/06`` Definições da camada de Visão & Controle;
 > - [ ] Integração front & back;
+> - [ ] Telas implementadas.
 
 > ``30/06`` à ``04/07``Acompanhamento de projeto;
 
@@ -47,10 +51,10 @@ Aqui, vocês encontrarão o calendário de entregas. As entregas pelo calendári
 
 > ``06/07`` Apresentação final.
 
------------------------------------------------------
-# Projeto Escolhido
 
-## Almoxarifado de hospital
+# Lista de Projetos
+
+## Sistema de Almoxarifado Hospitalar
 
 O sistema para hospitais permite que sua equipe tenha total controle dos recursos e materiais utilizados em procedimentos médicos. A ideia é   digitalizar um processo comumente manual, cujo controle se dá por planilhas dispersas no sistema de uma operadora de saúde.
 
@@ -75,3 +79,4 @@ No estoque, deverão ser mostradas as seguintes  informações: o nome do materi
 Em relação às novas compras de materiais, deverão ser guardadas as seguintes informações: um código de identificação dessa demanda, o funcionário que a realizou, o(s) produto(s) solicitados(s), data da demanda, o valor total da compra, sua forma de pagamento e sua situação (ativa ou cancelada).
 
 Os funcionário poderam realizar baixas no Almoxarido, isto é, demandar materiais para serem utilizados pelo hospital. Uma vez que essa demanda for atendida, atualiza-se a quantidade de elementos no almoxarifado.
+

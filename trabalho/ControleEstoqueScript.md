@@ -1,3 +1,10 @@
+--TIPOSMOVIMENTO
+create table TIPOSMOVIMENTO (ID number(10) not null,DSTIPOMOVI varchar2(100),TIOPERACAO number(10) not null);
+create unique index WETIPOMO_PK_TIPOSMOVIMENTO on TIPOSMOVIMENTO (ID);
+alter table TIPOSMOVIMENTO add constraint WETIPOMO_PK_TIPOSMOVIMENTO primary key (ID) using index WETIPOMO_PK_TIPOSMOVIMENTO;
+create sequence WETIPOMOID;
+
+
 --UNIDADESMEDIDA
 create table UNIDADESMEDIDA (ID number(10) not null,DSUNIMED varchar2(50) not null,DSSIGLA varchar2(6) not null);
 create unique index WEUNIMED_PK_UNIDADESMEDIDA on UNIDADESMEDIDA (ID);

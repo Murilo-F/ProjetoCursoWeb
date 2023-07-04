@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema de Almoxarifado Hospitalar - Controle de Materiais</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        :root {
+            font-size: 16px;
+        }
+
+        body {
+            padding: 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo img {
+            height: 3.125rem;
+            margin-right: 1rem;
+        }
+
+        .logo h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 50rem;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: 0.1rem;
+            margin-right: 0.1rem;
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        .search-bar input {
+            margin-left: 0.1rem;
+            margin-right: 0.1rem;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-left: 0.1rem;
+            margin-right: 0.1rem;
+        }
+
+        .username {
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .card-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            width: calc(50% - 1rem);
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body {
+            flex: 1;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .card-text {
+            margin-bottom: 1rem;
+        }
+
+        .btn-primary {
+            background-color: #1C2B59;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #1D2173;
+        }
+
+        .modal-dialog {
+            max-width: 500px;
+            margin: 1.75rem auto;
+        }
+
+        .modal-content {
+            padding: 1rem;
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: none;
+        }
+
+        .modal-title {
+            margin: 0;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            border: 1px solid #ced4da;
+        }
+
+        .btn {
+            margin-right: 0.5rem;
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+        }
+
+        .table th,
+        .table td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+            white-space: nowrap;
+        }
+
+        .table tbody + tbody {
+            border-top: 2px solid #dee2e6;
+        }
+
+        .table-sm th,
+        .table-sm td {
+            padding: 0.3rem;
+        }
+
+        .modal-footer {
+            border-top: none;
+            justify-content: flex-end;
+        }
+
+        .alert {
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+        }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <div class="logo">
+                    <a href="inicial 2.html">
+                        <img src="https://github.com/Murilo-F/ProjetoCursoWeb/blob/main/frontend%20site/pagina%20principal/logo.png?raw=true" alt="Logo do site">
+                    </a>
+                    <h3 class="nome">Almoxarifado Hospitalar</h3>
+                </div>
+            </div>
+
+            </div>
+            <div class="card-columns">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Controle de Materiais</h5>
+                        <p class="card-text">Simplifique o cadastro de materiais de forma intuitiva e eficiente, proporcionando um controle preciso e organizado.</p>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#cadastroMaterialModal">Cadastrar</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Relatórios</h5>
+                        <p class="card-text">Gere relatórios de vendas, materiais com baixo estoque e materiais em falta.</p>
+                        <a href="relatorios.html" class="btn btn-primary">Gerar relatório</a>
+                    </div>
+        </div>
+    </div>
+
+    <!-- Modal de cadastro de material -->
+    <div class="modal fade" id="cadastroMaterialModal" tabindex="-1" role="dialog" aria-labelledby="cadastroMaterialModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cadastroMaterialModalLabel">Cadastrar Material</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="cadastroMaterialForm">
+                        <div class="form-group">
+                            <label for="nome">Nome:</label>
+                            <input type="text" class="form-control" id="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="codigoBarras">Código de Barras:</label>
+                            <input type="text" class="form-control" id="codigoBarras" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="valorCompra">Valor de Compra:</label>
+                            <input type="number" class="form-control" id="valorCompra" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fornecedor">Fornecedor:</label>
+                            <input type="text" class="form-control" id="fornecedor" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="minima">Quantidade Mínima:</label>
+                            <input type="number" class="form-control" id="minima" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fabricante">Fabricante:</label>
+                            <input type="text" class="form-control" id="fabricante" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="descricao">Descrição:</label>
+                            <textarea class="form-control" id="descricao" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="cadastrarMaterial()">Cadastrar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>Lista de Materiais</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Código de Barras</th>
+                <th>Valor de Compra</th>
+                <th>Fornecedor</th>
+                <th>Quantidade Mínima</th>
+                <th>Fabricante</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="materialTableBody">
+            <!-- Os materiais cadastrados serão exibidos aqui -->
+        </tbody>
+    </table>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function cadastrarMaterial() {
+            // Obter os valores do formulário
+            var nome = $('#nome').val();
+            var codigoBarras = $('#codigoBarras').val();
+            var valorCompra = $('#valorCompra').val();
+            var fornecedor = $('#fornecedor').val();
+            var quantidadeMinima = $('#minima').val();
+            var fabricante = $('#fabricante').val();
+            var descricao = $('#descricao').val();
+
+           // Array para armazenar os materiais cadastrados
+        let materiais = [];
+
+// Função para cadastrar um novo material
+function cadastrarMaterial(event) {
+    event.preventDefault();
+
+    // Obter os valores dos campos do formulário
+    const nome = $('#nome').val();
+    const codigoBarras = $('#codigoBarras').val();
+    const valorCompra = $('#valorCompra').val();
+    const fornecedor = $('#fornecedor').val();
+    const quantidadeMinima = $('#quantidadeMinima').val();
+    const fabricante = $('#fabricante').val();
+    const descricao = $('#descricao').val();
+
+    // Criar um objeto para representar o material
+    const material = {
+        nome: nome,
+        codigoBarras: codigoBarras,
+        valorCompra: valorCompra,
+        fornecedor: fornecedor,
+        quantidadeMinima: quantidadeMinima,
+        fabricante: fabricante,
+        descricao: descricao
+    };
+
+    // Adicionar o material ao array de materiais
+    materiais.push(material);
+
+    // Limpar os campos do formulário
+    $('#nome').val('');
+    $('#codigoBarras').val('');
+    $('#valorCompra').val('');
+    $('#fornecedor').val('');
+    $('#quantidadeMinima').val('');
+    $('#fabricante').val('');
+    $('#descricao').val('');
+
+    // Atualizar a tabela de materiais
+    atualizarTabelaMateriais();
+}
+
+// Função para atualizar a tabela de materiais
+function atualizarTabelaMateriais() {
+    const tbody = $('#materialTableBody');
+
+    // Limpar o conteúdo da tabela
+    tbody.empty();
+
+    // Preencher a tabela com os materiais cadastrados
+    for (const material of materiais) {
+        const row = `<tr>
+                        <td>${material.nome}</td>
+                        <td>${material.codigoBarras}</td>
+                        <td>${material.valorCompra}</td>
+                        <td>${material.fornecedor}</td>
+                        <td>${material.quantidadeMinima}</td>
+                        <td>${material.fabricante}</td>
+                        <td>${material.descricao}</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="editarMaterial('${material.codigoBarras}')">Editar</button>
+                            <button class="btn btn-primary" onclick="excluirMaterial('${material.codigoBarras}')">Excluir</button>
+                        </td>
+                    </tr>`;
+        tbody.append(row);
+    }
+}
+
+// Função para editar um material
+function editarMaterial(codigoBarras) {
+    // Buscar o material pelo código de barras
+    const material = materiais.find(m => m.codigoBarras === codigoBarras);
+
+    if (material) {
+        // Preencher os campos do formulário com os dados do material
+        $('#nome').val(material.nome);
+        $('#codigoBarras').val(material.codigoBarras);
+        $('#valorCompra').val(material.valorCompra);
+        $('#fornecedor').val(material.fornecedor);
+        $('#quantidadeMinima').val(material.quantidadeMinima);
+        $('#fabricante').val(material.fabricante);
+        $('#descricao').val(material.descricao);
+
+        // Remover o material do array de materiais
+        materiais = materiais.filter(m => m.codigoBarras !== codigoBarras);
+
+        // Atualizar a tabela de materiais
+        atualizarTabelaMateriais();
+    }
+}
+
+// Função para excluir um material
+function excluirMaterial(codigoBarras) {
+    // Filtrar o material pelo código de barras
+    materiais = materiais.filter(m => m.codigoBarras !== codigoBarras);
+
+    // Atualizar a tabela de materiais
+    atualizarTabelaMateriais();
+}
+
+// Associar a função cadastrarMaterial ao evento de envio do formulário
+$('#materialForm').submit(cadastrarMaterial);
+
+            // Exibir uma mensagem de sucesso
+            $('#cadastroMaterialModal').modal('hide');
+            $('.alert-success').remove();
+            var successMessage = '<div class="alert alert-success" role="alert">Material cadastrado com sucesso!</div>';
+            $('.content').prepend(successMessage);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema de Almoxarifado Hospitalar - Relatórios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        :root {
+            font-size: 16px;
+        }
+
+        body {
+            padding: 2rem;
+        }
+
+        .logo img {
+            height: 3.125rem;
+            margin-right: 1rem;
+            display: inline-block;
+        }
+
+        .title {
+            display: inline-block;
+            margin-right: 100px;
+        }
+
+        .container {
+            max-width: 50rem;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: 0.1rem;
+            margin-right: 0.1rem;
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        .search-bar input {
+            margin-left: 0.1rem;
+            margin-right: 0.1rem;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-left: 0.1rem;
+            margin-right: 0.1rem;
+        }
+
+        .username {
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .card-columns {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            width: calc(50% - 1rem);
+            margin-bottom: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-body {
+            flex: 1;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .card-text {
+            margin-bottom: 1rem;
+        }
+
+        .btn-primary {
+            background-color: #1C2B59;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #1D2173;
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #212529;
+        }
+
+        .table th,
+        .table td {
+            padding: 0.75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+            white-space: nowrap;
+        }
+
+        .table tbody+tbody {
+            border-top: 2px solid #dee2e6;
+        }
+
+        .table-sm th,
+        .table-sm td {
+            padding: 0.3rem;
+        }
+
+        .alert {
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+        }
+
+        .alert-success{
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+        }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+        }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="inicial 2.html">
+                    <img src="https://github.com/Murilo-F/ProjetoCursoWeb/blob/main/frontend%20site/pagina%20principal/logo.png?raw=true" alt="Logo do site">
+                </a>
+            </div>
+            <div class="title">
+                <h2>Almoxarifado Hospitalar</h2>
+            </div>
+            <div class="user-info">
+                <span class="username">Olá, Usuário!</span>
+                <button class="btn btn-primary">Sair</button>
+            </div>
+        </div>
+        
+        <div class="card-columns">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Relatório de Entradas</h5>
+                    <p class="card-text">Exibe informações sobre os materiais que foram recebidos, fornece detalhes como nome do material, descrição, quantidade recebida e data de entrada.</p>
+                    <a href="#" class="btn btn-primary">Ver detalhes</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Relatório de Saídas</h5>
+                    <p class="card-text">Apresenta informações sobre os materiais que foram retirados, inclui detalhes como nome do material, descrição, quantidade retirada, data de saída e destino.</p>
+                    <a href="#" class="btn btn-primary">Ver detalhes</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Relatório de Materiais com baixo estoque</h5>
+                    <p class="card-text">Exibe uma lista dos materiais que estão com quantidades abaixo de um limite pré-definido, ajuda a identificar quais materiais estão próximos de se esgotarem, permitindo que medidas sejam tomadas para reabastecer o estoque a tempo.</p>
+                    <a href="#" class="btn btn-primary">Ver detalhes</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Relatório de Materiais em falta</h5>
+                    <p class="card-text">Mostra os materiais que estão completamente esgotados, lista os materiais que não possuem nenhuma quantidade disponível, indicando a necessidade imediata de reabastecimento. </p>
+                    <a href="#" class="btn btn-primary">Ver detalhes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Quantidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Item 1</td>
+                <td>Descrição do item 1</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Item 2</td>
+                <td>Descrição do item 2</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="alert alert-success">
+        Relatório gerado com sucesso!
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        function exibirMensagemSucesso(mensagem) {
+            var alertElement = document.createElement("div");
+            alertElement.className = "alert alert-success";
+            alertElement.textContent = mensagem;
+            var container = document.querySelector(".container");
+            container.insertBefore(alertElement, container.firstChild);
+        }
+
+        function exibirMensagemErro(mensagem) {
+            var alertElement = document.createElement("div");
+            alertElement.className = "alert alert-danger";
+            alertElement.textContent = mensagem;
+            var container = document.querySelector(".container");
+            container.insertBefore(alertElement, container.firstChild);
+        }
+
+        var sairButton = document.querySelector(".user-info button");
+        sairButton.addEventListener("click", function() {
+            alert("Você saiu do sistema.");
+        });
+
+        var searchForm = document.querySelector(".search-bar");
+        searchForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            var searchInput = document.querySelector(".search-bar input");
+            var searchTerm = searchInput.value;
+            console.log("Buscando por: " + searchTerm);
+        });
+
+        var viewDetailsButtons = document.querySelectorAll(".card .btn-primary");
+        viewDetailsButtons.forEach(function(button) {
+            button.addEventListener("click", function(event) {
+                var card = event.target.closest(".card");
+                var cardTitle = card.querySelector(".card-title").textContent;
+                console.log("Detalhes do relatório: " + cardTitle);
+                var dataInicial = prompt("Digite a data inicial:");
+                var dataFinal = prompt("Digite a data final:");
+                console.log("Período: " + dataInicial + " - " + dataFinal);
+            });
+        });
+    </script>
+</body>
+
+</html>

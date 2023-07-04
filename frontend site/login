@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistema de Almoxarifado Hospitalar - Login</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            height: 80px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #1C2B59;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #0E1B33;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://github.com/Murilo-F/ProjetoCursoWeb/blob/main/frontend%20site/pagina%20principal/logo.png?raw=true" alt="Logo do site">
+        </div>
+        <h3 class="title">Almoxarifado Hospitalar</h3>
+        <div id="login">
+            <form>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" placeholder="Digite seu e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" placeholder="Digite sua senha">
+                </div>
+                <div class="form-group">
+                    <button type="button">Acessar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        var vContinue = document.querySelector("#login button");
+
+        vContinue.addEventListener("click", function() {
+            document.body.classList.add('denied');
+        }, false);
+
+        var pfx = ["webkit", "moz", "MS", "o", ""];
+        function PrefixedEvent(element, type, callback) {
+            for (var p = 0; p < pfx.length; p++) {
+                if (!pfx[p]) type = type.toLowerCase();
+                element.addEventListener(pfx[p] + type, callback, false);
+            }
+        }
+
+        PrefixedEvent(document.body, "AnimationEnd", function() {
+            document.body.classList.remove('denied');
+        });
+    </script>
+</body>
+</html>

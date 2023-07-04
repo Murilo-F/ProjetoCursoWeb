@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Almoxarifado Hospitalar - Funcionários</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .logo img {
+            height: 3.125rem;
+        }
+
+        .nome {
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+
+        .card-columns {
+            column-count: 2;
+            column-gap: 20px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .table {
+            margin-top: 20px;
+        }
+
+        .table thead th {
+            border-top: none;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .table .btn {
+            margin-right: 5px;
+        }
+
+        /* Estilização para os botões */
+        .btn-primary {
+            background-color: #1C2B59;
+            border-color: #1C2B59;
+        }
+
+        .btn-primary:hover {
+            background-color: #152347;
+            border-color: #152347;
+        }
+
+        .btn-danger {
+            background-color: #1C2B59;
+            border-color: #1C2B59;
+        }
+
+        .btn-danger:hover {
+            background-color: #152347;
+            border-color: #152347;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="inicial 2.html">
+                    <img src="https://github.com/Murilo-F/ProjetoCursoWeb/blob/main/frontend%20site/pagina%20principal/logo.png?raw=true" alt="Logo do site">
+                </a>
+            </div>
+            <h3 class="nome">Funcionários</h3>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Adicionar Funcionário</h5>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="employeeMatricula">Matrícula:</label>
+                            <input type="text" class="form-control" id="employeeMatricula" placeholder="Digite a matrícula">
+                        </div>
+                        <div class="form-group col-md-9">
+                            <label for="employeeName">Nome:</label>
+                            <input type="text" class="form-control" id="employeeName" placeholder="Digite o nome">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="employeeAddress">Endereço:</label>
+                            <input type="text" class="form-control" id="employeeAddress" placeholder="Digite o endereço">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="employeePhone">Telefone:</label>
+                            <input type="text" class="form-control" id="employeePhone" placeholder="Digite o telefone">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="employeeCPF">CPF:</label>
+                            <input type="text" class="form-control" id="employeeCPF" placeholder="Digite o CPF">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="employeeDOB">Data de Nascimento:</label>
+                            <input type="text" class="form-control" id="employeeDOB" placeholder="Digite a data de nascimento">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="employeeStatus">Situação:</label>
+                            <select class="form-control" id="employeeStatus">
+                                <option value="ativo">Ativo</option>
+                                <option value="inativo">Inativo</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="employeeEmail">E-mail:</label>
+                            <input type="text" class="form-control" id="employeeEmail" placeholder="Digite o e-mail">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="employeePosition">Cargo:</label>
+                            <input type="text" class="form-control" id="employeePosition" placeholder="Digite o cargo">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="employeeLogin">Login:</label>
+                            <input type="text" class="form-control" id="employeeLogin" placeholder="Digite o login">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="employeePassword">Senha:</label>
+                            <input type="password" class="form-control" id="employeePassword" placeholder="Digite a senha">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Adicionar</button>
+                </form>
+            </div>
+        </div>
+
+        <h3>Lista de Funcionários</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    <th>CPF</th>
+                    <th>Data de Nascimento</th>
+                    <th>Situação</th>
+                    <th>E-mail</th>
+                    <th>Cargo</th>
+                    <th>Login</th>
+                    <th>Senha</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os funcionários serão adicionados dinamicamente aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        // Código JavaScript para adicionar funcionários e preencher a tabela
+
+        // Função para adicionar um funcionário na tabela
+        function addEmployeeToTable(employee) {
+            var table = document.querySelector('.table tbody');
+            var row = table.insertRow();
+            row.innerHTML = `
+                <td>${employee.matricula}</td>
+                <td>${employee.nome}</td>
+                <td>${employee.endereco}</td>
+                <td>${employee.telefone}</td>
+                <td>${employee.cpf}</td>
+                <td>${employee.dataNascimento}</td>
+                <td>${employee.situacao}</td>
+                <td>${employee.email}</td>
+                <td>${employee.cargo}</td>
+                <td>${employee.login}</td>
+                <td>${employee.senha}</td>
+                <td>
+                    <button class="btn btn-primary">Editar</button>
+                    <button class="btn btn-danger">Excluir</button>
+                </td>
+            `;
+        }
+
+        // Função para limpar os campos do formulário
+        function clearFormFields() {
+            document.getElementById('employeeMatricula').value = '';
+            document.getElementById('employeeName').value = '';
+            document.getElementById('employeeAddress').value = '';
+            document.getElementById('employeePhone').value = '';
+            document.getElementById('employeeCPF').value = '';
+            document.getElementById('employeeDOB').value = '';
+            document.getElementById('employeeStatus').selectedIndex = 0;
+            document.getElementById('employeeEmail').value = '';
+            document.getElementById('employeePosition').value = '';
+            document.getElementById('employeeLogin').value = '';
+            document.getElementById('employeePassword').value = '';
+        }
+
+        // Função para adicionar um novo funcionário
+        function addEmployee(event) {
+            event.preventDefault();
+
+            var matricula = document.getElementById('employeeMatricula').value;
+            var nome = document.getElementById('employeeName').value;
+            var endereco = document.getElementById('employeeAddress').value;
+            var telefone = document.getElementById('employeePhone').value;
+            var cpf = document.getElementById('employeeCPF').value;
+            var dataNascimento = document.getElementById('employeeDOB').value;
+            var situacao = document.getElementById('employeeStatus').value;
+            var email = document.getElementById('employeeEmail').value;
+            var cargo = document.getElementById('employeePosition').value;
+            var login = document.getElementById('employeeLogin').value;
+            var senha = document.getElementById('employeePassword').value;
+
+            var employee = {
+                matricula: matricula,
+                nome: nome,
+                endereco: endereco,
+                telefone: telefone,
+                cpf: cpf,
+                dataNascimento: dataNascimento,
+                situacao: situacao,
+                email: email,
+                cargo: cargo,
+                login: login,
+                senha: senha
+            };
+
+            addEmployeeToTable(employee);
+            clearFormFields();
+        }
+
+        // Event listener para adicionar um novo funcionário
+        var form = document.querySelector('form');
+        form.addEventListener('submit', addEmployee);
+    </script>
+</body>
+
+</html>

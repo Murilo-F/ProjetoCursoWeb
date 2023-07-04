@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema de Almoxarifado Hospitalar - Página Inicial</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        :root {
+            font-size: 16px;
+        }
+
+        .button {
+            background-color: #1C2B59;
+            color: #fff;
+            border: none;
+            padding: 1rem 2rem;
+            cursor: pointer;
+        }
+
+        .button:active {
+            background-color: #1C2B59;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+            /* Espaço entre o conteúdo e o carrossel */
+        }
+
+        .header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 0.1rem;
+            gap: 1rem;
+        }
+
+        .search-bar input {
+            margin-left: 0.1rem;
+            margin-right: 0.1rem;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-left: 0.8rem;
+            margin-right: 0.1rem;
+        }
+
+        .username {
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .logo {
+            margin-right: 0.8rem;
+        }
+
+        .logo img {
+            height: 3.125rem;
+        }
+
+        .card-columns {
+            column-count: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        /* Ajuste do tamanho das caixas de acesso */
+        .card-columns .card {
+            width: 100%;
+            padding-right: 1px;
+            padding-left: 1px;
+            margin-bottom: 16px;
+        }
+
+        /* Alinhamento das caixas de acesso */
+        .card-columns .card:nth-child(odd) {
+            order: -1;
+        }
+
+        .card-columns .card {
+            width: calc(50% - 1rem);
+            margin-right: 1px;
+            margin-left: 1px;
+        }
+
+        /* Estilo dos botões */
+        .btn-primary {
+            background-color: #1C2B59;
+            color: #fff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #1C2B59;
+        }
+
+        #image img {
+            width: 70%;
+            display: block;
+            margin: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <div class="logo">
+                    <img src="https://github.com/Murilo-F/ProjetoCursoWeb/blob/main/frontend%20site/pagina%20principal/logo.png?raw=true"
+                        alt="Logo do site">
+                </div>
+                <h3 class="nome">Almoxarifado Hospitalar</h3>
+                <div class="search-bar">
+                    <input type="text" placeholder="Buscar...">
+                    <button class="btn btn-primary">Buscar</button>
+                </div>
+                <div class="user-info">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <a href="login.html" class="btn btn-primary">Login</a>
+                </div>
+            </div>
+
+            <div class="card-columns">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Controle de Materiais</h5>
+                        <p class="card-text">Gerencie as informações dos materiais, incluindo cadastro, alteração e
+                            busca.</p>
+                        <a href="materiais.html" class="btn btn-primary">Acessar</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Controle de Funcionários</h5>
+                        <p class="card-text">Gerencie as informações dos funcionários, incluindo cadastro, alteração e
+                            busca.</p>
+                        <a href="funcionarios.html" class="btn btn-primary">Acessar</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Controle de Fornecedores</h5>
+                        <p class="card-text">Gerencie as informações dos fornecedores, incluindo cadastro, alteração e
+                            busca.</p>
+                        <a href="fornecedores.html" class="btn btn-primary">Acessar</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Relatórios</h5>
+                        <p class="card-text">Gere relatórios de vendas, materiais com baixo estoque e materiais em
+                            falta.</p>
+                        <a href="relatorios.html" class="btn btn-primary">Acessar</a>
+                    </div>
+                </div>
+            </div>
+            <div id="image">
+                <img src="https://raw.githubusercontent.com/Murilo-F/ProjetoCursoWeb/a2812970b6db22303af9ab84045c167368229a37/frontend%20site/pagina%20principal/banner_1.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

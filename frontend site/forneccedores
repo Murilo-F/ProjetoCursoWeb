@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Almoxarifado Hospitalar - Fornecedores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .container {
+            margin-top: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .logo img {
+            height: 3.125rem;
+        }
+
+        .nome {
+            margin-bottom: 0;
+            margin-left: 10px;
+        }
+
+        .card-columns {
+            column-count: 2;
+            column-gap: 20px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .table {
+            margin-top: 20px;
+        }
+
+        .table thead th {
+            border-top: none;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .table .btn {
+            margin-right: 5px;
+        }
+
+        /* Estilização para os botões */
+        .btn-primary {
+            background-color: #1C2B59;
+            border-color: #1C2B59;
+        }
+
+        .btn-primary:hover {
+            background-color: #152347;
+            border-color: #152347;
+        }
+
+        .btn-danger {
+            background-color: #1C2B59;
+            border-color: #1C2B59;
+        }
+
+        .btn-danger:hover {
+            background-color: #152347;
+            border-color: #152347;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <a href="inicial 2.html">
+                <img src="https://github.com/Murilo-F/ProjetoCursoWeb/blob/main/frontend%20site/pagina%20principal/logo.png?raw=true" alt="Logo do site">
+            </a>
+            </div>
+            <h3 class="nome">Fornecedores</h3>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Adicionar Fornecedor</h5>
+                <form id="supplierForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="supplierMatricula">Matrícula:</label>
+                            <input type="text" class="form-control" id="supplierMatricula" placeholder="Digite a matrícula" required>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <label for="supplierName">Nome Fantasia:</label>
+                            <input type="text" class="form-control" id="supplierName" placeholder="Digite o nome fantasia" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="supplierAddress">Endereço:</label>
+                            <input type="text" class="form-control" id="supplierAddress" placeholder="Digite o endereço" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="supplierPhone">Telefone:</label>
+                            <input type="text" class="form-control" id="supplierPhone" placeholder="Digite o telefone" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="supplierCNPJ">CNPJ:</label>
+                            <input type="text" class="form-control" id="supplierCNPJ" placeholder="Digite o CNPJ" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="supplierDeliveryTime">Tempo de Entrega:</label>
+                            <input type="text" class="form-control" id="supplierDeliveryTime" placeholder="Digite o tempo de entrega" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="supplierEmail">E-mail:</label>
+                        <input type="email" class="form-control" id="supplierEmail" placeholder="Digite o e-mail" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Adicionar</button>
+                </form>
+            </div>
+        </div>
+
+        <h3>Lista de Fornecedores</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Matrícula</th>
+                    <th>Nome Fantasia</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    <th>CNPJ</th>
+                    <th>Tempo de Entrega</th>
+                    <th>E-mail</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="supplierTableBody">
+                <!-- Os fornecedores serão adicionados dinamicamente aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script>
+        // Código JavaScript para adicionar fornecedores e preencher a tabela
+
+        // Função para adicionar um fornecedor na tabela
+        function addSupplierToTable(supplier) {
+            var tableBody = document.getElementById('supplierTableBody');
+            var row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${supplier.matricula}</td>
+                <td>${supplier.nomeFantasia}</td>
+                <td>${supplier.endereco}</td>
+                <td>${supplier.telefone}</td>
+                <td>${supplier.cnpj}</td>
+                <td>${supplier.tempoEntrega}</td>
+                <td>${supplier.email}</td>
+                <td>
+                    <button class="btn btn-primary">Editar</button>
+                    <button class="btn btn-danger">Excluir</button>
+                </td>
+            `;
+            tableBody.appendChild(row);
+        }
+
+        // Função para limpar os campos do formulário
+        function clearFormFields() {
+            document.getElementById('supplierMatricula').value = '';
+            document.getElementById('supplierName').value = '';
+            document.getElementById('supplierAddress').value = '';
+            document.getElementById('supplierPhone').value = '';
+            document.getElementById('supplierCNPJ').value = '';
+            document.getElementById('supplierDeliveryTime').value = '';
+            document.getElementById('supplierEmail').value = '';
+        }
+
+        // Função para adicionar um novo fornecedor
+        function addSupplier(event) {
+            event.preventDefault();
+
+            var matricula = document.getElementById('supplierMatricula').value;
+            var nomeFantasia = document.getElementById('supplierName').value;
+            var endereco = document.getElementById('supplierAddress').value;
+            var telefone = document.getElementById('supplierPhone').value;
+            var cnpj = document.getElementById('supplierCNPJ').value;
+            var tempoEntrega = document.getElementById('supplierDeliveryTime').value;
+            var email = document.getElementById('supplierEmail').value;
+
+            var supplier = {
+                matricula: matricula,
+                nomeFantasia: nomeFantasia,
+                endereco: endereco,
+                telefone: telefone,
+                cnpj: cnpj,
+                tempoEntrega: tempoEntrega,
+                email: email
+            };
+
+            addSupplierToTable(supplier);
+            clearFormFields();
+        }
+
+        // Event listener para adicionar um novo fornecedor
+        var form = document.querySelector('form');
+        form.addEventListener('submit', addSupplier);
+    </script>
+</body>
+
+</html>

@@ -64,7 +64,7 @@
         .user-info {
             display: flex;
             align-items: center;
-            margin-left: 0.8rem;
+            margin-left: 0.1rem;
             margin-right: 0.1rem;
         }
 
@@ -141,8 +141,8 @@
                     <button class="btn btn-primary">Buscar</button>
                 </div>
                 <div class="user-info">
-                    <span class="glyphicon glyphicon-user"></span>
-                    <a href="login.html" class="btn btn-primary">Login</a>
+                    <span class="username">Olá, Usuário!</span>
+                    <button class="btn btn-primary">Sair</button>
                 </div>
             </div>
 

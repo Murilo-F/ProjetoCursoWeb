@@ -87,18 +87,16 @@
                     <input type="password" id="password" placeholder="Digite sua senha">
                 </div>
                 <div class="form-group">
-                    <button type="button">Acessar</button>
+                    <button type="button" onclick="window.location.href='inicial1.html'">Acessar</button>
+
                 </div>
             </form>
         </div>
     </div>
     <script>
-        var vContinue = document.querySelector("#login button");
-
-        vContinue.addEventListener("click", function() {
-            document.body.classList.add('denied');
-        }, false);
-
+    function acessar() {
+            window.location.href = 'inicial1.html';
+    }
         var pfx = ["webkit", "moz", "MS", "o", ""];
         function PrefixedEvent(element, type, callback) {
             for (var p = 0; p < pfx.length; p++) {

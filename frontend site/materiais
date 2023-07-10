@@ -40,7 +40,6 @@
         .header {
             display: flex;
             align-items: center;
-            margin-bottom: 2rem;
         }
 
         .search-bar {
@@ -60,8 +59,10 @@
         .user-info {
             display: flex;
             align-items: center;
-            margin-left: 0.1rem;
+            margin-left:40rem;
             margin-right: 0.1rem;
+            margin-bottom: 30px;
+            top: -70px;
         }
 
         .username {
@@ -211,11 +212,15 @@
         <div class="content">
             <div class="header">
                 <div class="logo">
-                    <a href="inicial 2.html">
+                    <a href="inicial1.html">
                         <img src="https://github.com/Murilo-F/ProjetoCursoWeb/blob/main/frontend%20site/pagina%20principal/logo.png?raw=true" alt="Logo do site">
                     </a>
                     <h3 class="nome">Almoxarifado Hospitalar</h3>
                 </div>
+            </div>
+            <div class="user-info">
+                <span class="username">Olá, Usuário!</span>
+                <button class="btn btn-primary">Sair</button>
             </div>
 
             </div>

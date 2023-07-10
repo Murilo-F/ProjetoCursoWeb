@@ -73,6 +73,19 @@
             background-color: #152347;
             border-color: #152347;
         }
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-left: 60rem;
+            margin-right: 0.1rem;
+            margin-bottom: 30px;
+            top: -50px;
+        }
+
+        .username {
+            margin-right: 1rem;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -80,11 +93,15 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-                <a href="inicial 2.html">
+                <a href="inicial1.html">
                 <img src="https://github.com/Murilo-F/ProjetoCursoWeb/blob/main/frontend%20site/pagina%20principal/logo.png?raw=true" alt="Logo do site">
             </a>
             </div>
             <h3 class="nome">Fornecedores</h3>
+        </div>
+        <div class="user-info">
+            <span class="username">Olá, Usuário!</span>
+            <button class="btn btn-primary">Sair</button>
         </div>
 
         <div class="card">
